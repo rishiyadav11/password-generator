@@ -14,10 +14,10 @@ const App = () => {
   const passwordGenerator = useCallback(() => {
     let pass = ""
     let str = ""
-    if (digit) str += "1234567890"
     if(uppercaseCheck) str+= "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     if(lowercaseCheck) str += "abcdefghijklmnopqrstuvwxyz"
     if (special) str += "!@#$%^&*()_-=+-*/.?><{}[];:`"
+    if (digit) str += "1234567890"
     for (let i = 0; i < length; i++) {
       let char = Math.floor(Math.random() * str.length)
       pass += str.charAt(char)
